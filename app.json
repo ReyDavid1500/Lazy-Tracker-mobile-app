@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "LazyTracker",
+    "slug": "lazytracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.lazytracker.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "LazyTracker uses the camera to scan products."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0F172A"
+      },
+      "package": "com.lazytracker.app",
+      "permissions": [
+        "CAMERA",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "LazyTracker uses the camera to scan products."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#3B82F6"
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#0F172A",
+          "imageWidth": 200
+        }
+      ]
+    ],
+    "scheme": "lazytracker",
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "555b37fc-3db7-49d1-bf0c-9a6d93037edf"
+      },
+      "router": {
+        "origin": false
+      }
+    },
+    "owner": "david1500s-organization"
+  }
+}
